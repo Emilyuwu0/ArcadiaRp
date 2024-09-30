@@ -1,0 +1,23 @@
+---
+import "../styles/global.css";
+import Layout from "../layouts/Layout.astro";
+import { Navbar } from "@react/molecules/navbar";
+import { Gallery } from "@react/molecules/sections/gallery";
+import { Information } from "@react/molecules/sections/information/Information";
+import { Footer } from "@react/molecules/sections/footer";
+import { Discovery } from "@react/molecules/sections/discovery";
+import { Hero } from "@react/molecules/sections/hero";
+import { BoostDiscord } from "@react/molecules/sections/boostDiscord";
+---
+
+<Layout title="Home">
+	<div class="relative dark">
+		<Navbar client:load />
+		<Hero />
+		<Discovery />
+		<Information />
+		<BoostDiscord />
+		<Gallery client:idle />
+		<Footer client:load />
+	</div>
+</Layout>

@@ -1,0 +1,18 @@
+---
+import "../../styles/global.css";
+import Layout from "../../layouts/Layout.astro";
+import { Navbar } from "@react/molecules/navbar";
+import { Footer } from "@react/molecules/sections/footer";
+import { Hero } from "@react/molecules/sections/hero";
+import { Normas } from "@react/molecules/sections/normas";
+import { NormasSelection } from "@react/molecules/sections/normasSelection";
+---
+
+<Layout title="Home">
+    <div class="relative dark">
+        <Navbar client:load />
+        <Hero />
+        <NormasSelection client:load />
+        <Footer client:load />
+    </div>
+</Layout>

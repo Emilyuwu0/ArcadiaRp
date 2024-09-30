@@ -1,0 +1,137 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*  https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/src#font_formats
+    el format importa recordar
+*/
+/* route base */
+@font-face {
+    font-family: 'Poppins';
+    src: url('/fonts/Poppins-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('/fonts/Poppins-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('/fonts/Poppins-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('/fonts/Poppins-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-display: swap;
+}
+
+:root {
+    --main-color: #9100D2;
+    --main-color-variant1: rgba(var(#9100D2), 0.75);
+    --secondary-color: #DAE8EC;
+    --title-color: #fff;
+    --subtitle-color: #9D9D9D;
+    --text-color: #fff;
+
+    --color-icons: rgb(18, 18, 18);
+    --bg-color-white: #9100D2;
+    --bg-color: #16101D;
+    --bg-color2: #0E0715;
+    --bg-cards: #1A181C;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Poppins', system-ui, sans-serif;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    color-scheme: dark;
+    -webkit-tap-highlight-color: transparent;
+  
+}
+
+
+body {
+    background-color: #16101D;
+}
+
+::-webkit-scrollbar {
+    width: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: -webkit-linear-gradient(-90.13deg, var(--main-color) 1.9%, #ff4ecd 97.5%);
+    border-radius: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #050816;
+}
+
+.general-icon {
+    fill: var(--color-icons);
+    width: 1.125rem;
+    height: 1.125rem;
+}
+
+.general-icon-networks {
+    @apply fill-[#fff] w-[1rem] h-[1rem] md:w-[1.625rem] md:h-[1.625rem];
+}
+
+/* text */
+
+.big-title {
+    color: var(--title-color);
+    font-size: clamp(2rem, 4vw, 3.25rem);
+    font-weight: 600;
+}
+
+.sections-title {
+    color: var(--title-color);
+    font-size: clamp(1.5rem, 2.5vw, 2.5rem);
+}
+
+.small-color-text {
+    color: var(--main-color);
+    font-size: clamp(0.875rem, 1.8vw, 1.5rem);
+}
+
+.small-color-alt {
+    color: #aaa6c3;
+    font-size: clamp(0.75rem, 2vw, 0.875rem);
+}
+
+.sections-title-alt {
+    color: var(--title-color);
+    font-size: clamp(1.125rem, 1.8vw, 1.625rem);
+}
+
+/* line navbar */
+
+.navbar li:not(:nth-child(1)) .line-menus {
+    width: 2px;
+    height: 26px;
+}
+
+.nav-menu {
+    background: rgb(var(--bg-color) / 85%);
+    box-shadow: 0 2px 14px 0 rgba(31, 38, 135, .37);
+    -webkit-backdrop-filter: blur(18px) saturate(180%);
+    backdrop-filter: blur(18px) saturate(180%);
+}
+
+.overflow-y-auto{
+    overflow-y: none !important;
+    padding-right: 0rem !important;
+}
